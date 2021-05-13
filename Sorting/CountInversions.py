@@ -14,7 +14,6 @@ def merge(a, l, m, h):
             c.append(a[i])
             i += 1
 
-    # Adding remaning numbers
     while i <= m:
         c.append(a[i])
         i += 1
