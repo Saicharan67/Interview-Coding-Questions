@@ -12,6 +12,21 @@ def inorder(root):
         inorder(root.right)
 
 
+def inorderIteration(root):
+    s = []
+    curr = root
+    while(curr is not None or s):
+
+        if curr is not None:
+            s.append(curr)
+            curr = curr.left
+        else:
+            curr = s.pop(-1)
+            print(curr.data)
+            curr = curr.right
+    print()
+
+
 def insertion(root, key):
 
     if root is None:
@@ -39,11 +54,8 @@ def deleteDeepestNode(root, d_node):
     q.append(root)
     while(len(q)):
         temp = q.pop(0)
-        print(temp.data)
         if temp is d_node:
-            print(temp)
             temp = None
-            print(temp)
             return
         if temp.right:
             if temp.right is d_node:
@@ -116,8 +128,8 @@ if __name__ == '__main__':
     insertion(root, 15)
     insertion(root, 8)
     print("The tree before the deletion:")
-    levelOrder(root)
-    key = 8
-    deletion(root, key)
-    print("\nThe tree after the deletion;")
-    levelOrder(root)
+    inorderIteration(root)
+    # key = 8
+    # deletion(root, key)
+    # print("\nThe tree after the deletion;")
+    # levelOrder(root)
