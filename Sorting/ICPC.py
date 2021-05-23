@@ -1,46 +1,46 @@
-# t1 = int(input())
+t1 = int(input())
 
-# for _ in range(t1):
-#     n, m, t = list(map(int, input().split()))
-#     p = list(map(int, input().split()))
-#     a = list(map(int, input().split()))
-#     k = list(map(int, input().split()))
-#     x = []
-#     for i, j in zip(k, a):
-#         x.append([i, j])
-#     x = sorted(x, key=lambda x: x[0], reverse=True)
-#     for i in range(m//2):
-#         t = t-x[i][1]
+for _ in range(t1):
+    n, m, t = list(map(int, input().split()))
+    p = list(map(int, input().split()))
+    a = list(map(int, input().split()))
+    k = list(map(int, input().split()))
+    x = []
+    for i, j in zip(k, a):
+        x.append([i, j])
+    x = sorted(x, key=lambda x: x[0], reverse=True)
+    for i in range(m//2):
+        t = t-x[i][1]
 
-#     p.sort()
-#     i = 0
-#     prob = 0
-#     while prob <= t and i < n:
-#         prob += p[i]
-#         if prob <= t:
-#             i += 1
-#         else:
-#             break
-#     print(i)
+    p.sort()
+    i = 0
+    prob = 0
+    while prob <= t and i < n:
+        prob += p[i]
+        if prob <= t:
+            i += 1
+        else:
+            break
+    print(i)
 
-# t = int(input())
+t = int(input())
 
-# for _ in range(t):
-#     n, m = map(int, input().split())
-#     st = []
-#     res = m
-#     for i in range(n):
-#         st.append(input())
-#     st.sort()
-#     for i in range(1, n):
-#         count = 0
-#         for j in range(m):
-#             if st[i-1][j] == st[i][j]:
-#                 count += 1
-#             else:
-#                 break
-#         res += m-count
-#     print(res)
+for _ in range(t):
+    n, m = map(int, input().split())
+    st = []
+    res = m
+    for i in range(n):
+        st.append(input())
+    st.sort()
+    for i in range(1, n):
+        count = 0
+        for j in range(m):
+            if st[i-1][j] == st[i][j]:
+                count += 1
+            else:
+                break
+        res += m-count
+    print(res)
 
 import math
 import copy
