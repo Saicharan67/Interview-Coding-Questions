@@ -119,16 +119,40 @@ def levelOrder(root):
                 q.append(temp.right)
 
 
+def printLeftView(root):
+    if root is None:
+        return None
+    else:
+        q = []
+        q.append(root)
+        while(True):
+            try:
+                print(q[-1].data)
+            except IndexError:
+                break
+            temp2 = len(q)
+            while temp2:
+                temp = q.pop(0)
+                if temp.left is not None:
+                    q.append(temp.left)
+                if temp.right is not None:
+                    q.append(temp.right)
+                temp2 -= 1
+
+
 if __name__ == '__main__':
-    root = Node(10)
-    insertion(root, 11)
-    insertion(root, 7)
-    insertion(root, 12)
-    insertion(root, 9)
-    insertion(root, 15)
-    insertion(root, 8)
-    print("The tree before the deletion:")
-    inorderIteration(root)
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.right.left = Node(6)
+    root.left.left = Node(4)
+    root.left.left.left = Node(7)
+    root.left.left.right = Node(8)
+    root.left.left.right.right = Node(9)
+    root.left.right = Node(5)
+    printLeftView(root)
+    # print("The tree before the deletion:")
+    # inorderIteration(root)
     # key = 8
     # deletion(root, key)
     # print("\nThe tree after the deletion;")
