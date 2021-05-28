@@ -69,20 +69,30 @@
 #         if(flag):
 #             print("YES")
 
-
+from collections import defaultdict
+from icecream import ic
 t = int(input())
+Mod = 10**9+7
+fact = [1]
 
+for i in range(1, 10):
+    fact.append(fact[i-1]*i)
 for _ in range(t):
-    n, x, y, k = map(int, input().split())
+    n = int(input())
 
     l = list(map(int, input().split()))
-    res = 0
-    s = set(l)
-
-    lim = y-x+2
-
-    if (k > lim):
-        res = len(s)+lim
-    else:
-        res = len(s)+k
-    print(res)
+    res = 1
+    Map = defaultdict(int)
+    cnt = n
+    for i in l:
+        Map[i] += 1
+    ic(Map)
+    for i in range(n):
+        if Map[i] == 0:
+            break
+        res = (res*Map[i]) % Mod
+        ic(res)
+        Map[i] -= 1
+        cnt -= 1
+    ic(fact[cnt])
+    print(res*fact[cnt] % Mod)
