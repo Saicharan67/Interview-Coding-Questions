@@ -14,7 +14,7 @@ def minDiff(arr, i, sumCal, sumTotal):
 def findMin(a, n):
     s = sum(a)
 
-    dp = [0 for i in range(s+1) for j in range(n+1)]
+    dp = [[0 for i in range(s+1)] for j in range(n+1)]
 
     for i in range(n+1):
         dp[i][0] = True
@@ -33,3 +33,6 @@ def findMin(a, n):
             diff = s-2*j
             break
     print(diff)
+
+
+findMin([2, 7, 4, 1, 8, 1], 5)
