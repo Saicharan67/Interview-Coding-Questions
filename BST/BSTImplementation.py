@@ -61,6 +61,20 @@ def delete(root, data):
     return root
 
 
+def postorder(root):
+    if root is not None:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.data, end=" "),
+
+
+def preorder(root):
+    if root is not None:
+        print(root.data, end=" "),
+        preorder(root.left)
+        preorder(root.right)
+
+
 def inorder(root):
     if root is not None:
         inorder(root.left)
@@ -108,13 +122,17 @@ r = insertNode(r, 13)
 r = insertNode(r, 11)
 r = insertNode(r, 14)
 r = insertNode(r, 0)
-print(search(r, 20))
-print('InOrder Traversal : ', end=" ")
-inorder(r)
-r = delete(r, 10)
-print('\nInOrder Traversal : ', end=" ")
-inorder(r)
-print('Min in BST :', FindMin(r))
-print('Height of BST  : ', height(r))
-print('Level Order Traversal :', end=" ")
-levelOrder(r)
+# print(search(r, 20))
+# print('InOrder Traversal : ', end=" ")
+# inorder(r)
+# r = delete(r, 10)
+# print('\nInOrder Traversal : ', end=" ")
+# inorder(r)
+# print('Min in BST :', FindMin(r))
+# print('Height of BST  : ', height(r))
+# print('Level Order Traversal :', end=" ")
+# levelOrder(r)
+
+preorder(r)
+print('\n')
+postorder(r)

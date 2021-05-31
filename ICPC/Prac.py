@@ -20,10 +20,14 @@ for _ in range(t):
     for i in range(n):
         count = 0
         for j in range(n):
-            if l[j][2] == l[i][2] and l[i][0] <= l[j][0] and l[i][1] >= l[j][1]:
-                count += 1
-        if count >= 2:
+            if l[j][2] == l[i][2]:
+                if l[i][0] <= l[j][0] and l[j][0] <= l[i][1]:
+                    count += 1
+                elif l[i][0] <= l[j][1] and l[j][1] <= l[i][1]:
+                    count += 1
+
+        if count > 2:
             print("NO")
             break
-    if count < 2:
+    if count <= 2:
         print('YES')
