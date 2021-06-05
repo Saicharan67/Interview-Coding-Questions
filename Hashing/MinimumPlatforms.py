@@ -16,5 +16,4 @@ def MinPlatforms(arr, dep, n):
     return result
 
 
-print(MinPlatforms([900, 940], [
-    910, 1200], 2))
+print(MinPlatforms([900, 940], [910, 1200], 2))
