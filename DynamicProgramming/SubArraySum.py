@@ -31,7 +31,7 @@ def subarraysumdp(arr, n, k):
             dp[i][j] = dp[i-1][j]
             if arr[i-1] <= j:
                 dp[i][j] |= dp[i-1][j-arr[i-1]]
-
+    print(dp[0])
     return dp[n][k]
 
 
