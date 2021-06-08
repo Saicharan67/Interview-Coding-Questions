@@ -1,3 +1,12 @@
+"""
+
+Given an array arr[] and an integer sum, the task is to 
+find the number of pairs ofintegers in the array whose sum is equal to sum.
+
+
+"""
+
+
 from collections import defaultdict
 from icecream import ic
 
@@ -20,6 +29,6 @@ def CountPairs(arr, k):
 
 
 if __name__ == '__main__':
-    t = CountPairs([8, 12, 16, 4, 0, 20], 4)
+    t = CountPairs([1, 5, 7, -1], 6)
 
-    assert t == 5, 'Correct value is {}'.format(t)
+    assert t == 2, 'Correct value is {}'.format(t)

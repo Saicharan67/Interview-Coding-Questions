@@ -1,3 +1,10 @@
+"""
+Given an array, find the maximum difference between 
+its two consecutive elements in its sorted form.
+
+"""
+
+
 def MaxAdjDiff(a):
     max_a = max(a)
     min_a = min(a)

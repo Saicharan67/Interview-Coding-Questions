@@ -1,5 +1,10 @@
 from icecream import ic
 
+"""
+Inplace Operations of array by removiing an element
+
+"""
+
 
 def removeElement(nums, val) -> int:
 

@@ -1,7 +1,9 @@
-# Given an array of n positive integers and a
-# positive integer k, the task is to find the maximum
-#  subarray size such that all subarrays of that
-#  size have the sum of elements less than k.
+"""Given an array of n positive integers and a
+positive integer k, the task is to find the maximum
+ subarray size such that all subarrays of that
+ size have the sum of elements less than k."""
+
+
 from icecream import ic
 
 

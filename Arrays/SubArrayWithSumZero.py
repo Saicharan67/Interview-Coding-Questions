@@ -1,3 +1,10 @@
+"""
+Given an array find out if we can divide the array such that we can find a continuous 
+sub array with sum as zero
+
+"""
+
+
 def SubArray(arr):
     d = set()
     temp = 0

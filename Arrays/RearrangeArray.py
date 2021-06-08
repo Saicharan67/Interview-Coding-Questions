@@ -1,3 +1,10 @@
+"""
+Given an array arr[] of size n where every element is in range 
+from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. 
+This should be done with O(1) extra space.
+"""
+
+
 from icecream import ic
 
 

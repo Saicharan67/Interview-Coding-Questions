@@ -1,6 +1,5 @@
-# Rearrange an array such that ‘arr[j]’
-#  becomes ‘i’ if ‘arr[i]’ is ‘j’ | Set 1
-from icecream import ic
+"""Rearrange an array such that ‘arr[j]’
+ becomes ‘i’ if ‘arr[i]’ is ‘j’ | Set 1"""
 
 
 def arrange(a, n):

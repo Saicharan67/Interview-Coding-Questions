@@ -1,8 +1,10 @@
-# Given an array of n elements and an integer m.
-#  The task is to find the maximum value of the
-#  sum of its subarray modulo m i.e find the
-# sum of each subarray mod m and print
-# the maximum value of this modulo operation.
+"""Given an array of n elements and an integer m.
+ The task is to find the maximum value of the
+ sum of its subarray modulo m i.e find the
+sum of each subarray mod m and print
+the maximum value of this modulo operation."""
+
+
 from icecream import ic
 
 
