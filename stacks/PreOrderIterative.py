@@ -1,3 +1,9 @@
+"""
+Given a head of a tree find the preOrder traersal of a tree using Iteration Method
+
+"""
+
+
 def preOrder(root):
     if root is None:
         return None

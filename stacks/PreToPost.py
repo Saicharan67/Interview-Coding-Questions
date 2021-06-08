@@ -1,3 +1,10 @@
+"""
+
+Given an PreOrder Traversal Of a Binary tree Find the PostOrder Traversal
+
+"""
+
+
 import itertools
 import functools
 
