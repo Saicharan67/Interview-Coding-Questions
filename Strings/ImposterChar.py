@@ -1,3 +1,9 @@
+"""
+Given two strings find the extra char present in the string
+
+"""
+
+
 from collections import defaultdict
 from icecream import ic
 
