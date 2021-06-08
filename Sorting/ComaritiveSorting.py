@@ -1,7 +1,7 @@
-# Comparators are used to compare two objects. In this challenge, we'll create a comparator and use
-# it to sort an array. The Player class is provided in the editor below. It has two fields:
+"""Comparators are used to compare two objects. In this challenge, we'll create a comparator and use
+it to sort an array. The Player class is provided in the editor below. It has two fields:
 
-# hackerrank question
+hackerrank question"""
 
 from functools import cmp_to_key
 

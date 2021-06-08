@@ -1,4 +1,17 @@
-from icecream import ic
+"""
+Consider you have an infinitely long binary tree having a pattern as below: 
+
+  
+               1
+            /      \
+           2        3
+         /  \      / \
+        4    5    6   7
+      /  \  / \  / \ / \
+     .  .  .  . .  .  .  .
+Given two nodes with values x and y. The task is to find the length of the shortest path between the two nodes. 
+
+"""
 
 
 def shortestPath(x, y):
