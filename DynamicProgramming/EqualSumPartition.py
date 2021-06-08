@@ -3,7 +3,8 @@ Given an Array of non-negative intergers find if we can divide the array into tw
 
 """
 
-dp = [[0]*50]*10
+dp = ([[False for i in range(50)]
+       for i in range(10)])
 
 
 def EqualSumDp(a, n):
@@ -22,6 +23,7 @@ def EqualSumDp(a, n):
             dp[i][j] = dp[i-1][j]
             if a[i-1] <= j:
                 dp[i][j] |= dp[i-1][j-a[i-1]]
+    print(dp)
     return dp[n][s]
 
 
