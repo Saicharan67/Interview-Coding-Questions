@@ -1,15 +1,17 @@
 """
-Given an array of non-negative intergers...,count the number of subset possible with an given number 
+Given an array of integers...find out the no of times we can have the array sum as target by assigning neg/pos sign to numbers
 
 
+Its same as CountSubsetsWithGivenSum
 """
 
 dp = ([[0 for i in range(6)]
        for i in range(6)])
 
 
-def CountSubsetSumDp(a, n, s):
-
+def CountSubsetwithTargetDp(a, n, Target):
+    x = sum(a)
+    s = (x+Target)//2
     for j in range(n+1):
         dp[j][0] = 1
     for i in range(1, n+1):
@@ -21,4 +23,4 @@ def CountSubsetSumDp(a, n, s):
     return dp[n][s]
 
 
-CountSubsetSumDp([2, 3, 5, 5, 10], 6, 10)
+CountSubsetwithTargetDp([1, 1, 2, 3], 4, 1)
