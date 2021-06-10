@@ -1,7 +1,7 @@
 from icecream import ic
 
 """
-Inplace Operations of array by removiing an element
+Inplace Operations of array by removing an element
 
 """
 

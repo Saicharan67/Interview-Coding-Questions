@@ -1,8 +1,11 @@
-"""Given an array of n elements and an integer m.
- The task is to find the maximum value of the
- sum of its subarray modulo m i.e find the
+"""
+Given an array of n elements and an integer m.
+The task is to find the maximum value of the
+sum of its subarray modulo m i.e find the
 sum of each subarray mod m and print
-the maximum value of this modulo operation."""
+the maximum value of this modulo operation.
+
+"""
 
 
 from icecream import ic
@@ -24,4 +27,4 @@ def MaxSumMod(a, n, m):
     return maxi
 
 
-print(MaxSumMod([7, 18], 2, 13))
+print(MaxSumMod([3, 3, 9, 9, 5], 5, 7))
