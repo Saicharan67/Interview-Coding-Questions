@@ -1,6 +1,6 @@
 
-dp = ([[False for i in range(50)]
-       for i in range(10)])
+dp = ([[False for i in range(31)]
+       for i in range(6)])
 # recursive
 
 
@@ -34,8 +34,8 @@ def subarraysumdp(arr, n, k):
                 dp[i][j] = dp[i-1][j]
             if arr[i-1] <= j:
                 dp[i][j] = (dp[i-1][j-arr[i-1]] or dp[i-1][j])
-
+    print(dp)
     return dp[n][k]
 
 
-print(subarraysumdp([2, 3, 7, 8, 10], 5, 4))
+print(subarraysumdp([2, 3, 7, 8, 10], 5, 10))
