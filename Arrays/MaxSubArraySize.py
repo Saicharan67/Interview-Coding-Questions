@@ -5,7 +5,7 @@ subarray size such that all subarrays of that
 size have the sum of elements less than k.
  
 """
-
+# This Question is Implemented By Minimum Size Sub Array Sum problem
 
 from icecream import ic
 

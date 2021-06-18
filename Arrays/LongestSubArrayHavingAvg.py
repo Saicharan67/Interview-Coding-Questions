@@ -13,19 +13,7 @@ Longest subarray is {1, 6} having average
 
 
 def longestsubarrayavg(arr, n, k):
-    st = 0
-    i = 0
-    curr = 0
-    maxi = -9999
-    while i < n:
-        curr += arr[i]
-        while curr//(i-st+1) < k and st < i:
-            curr -= arr[st]
-            st += 1
-        if curr//(i-st+1) >= k:
-            maxi = max(maxi, i-st+1)
-        i += 1
-    return maxi
+    pass
 
 
 print(longestsubarrayavg([2, -3, 3, 2, 1], 5, 2))
