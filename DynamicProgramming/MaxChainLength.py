@@ -23,7 +23,7 @@ def maxchain(Parr, n, prev, pos):
         return ans
 
 
-print(maxchain([[5, 24], [39, 60], [15, 28], [27, 40], [50, 90]], 5, 0, 0))
+print(maxchain([[1, 2], [2, 3], [3, 4]], 3, 0, 0))
 
 
 # Parr = sorted(Parr, key=lambda x: x[1])
@@ -39,3 +39,14 @@ print(maxchain([[5, 24], [39, 60], [15, 28], [27, 40], [50, 90]], 5, 0, 0))
 #                 mcl[i] = mcl[j] + 1
 #     print(mcl)
 #     return max(mcl)
+
+def findLongestChain(pairs):
+    pairs.sort()
+    dp = [1] * len(pairs)
+
+    for j in range(len(pairs)):
+        for i in range(j):
+            if pairs[i][1] < pairs[j][0]:
+                dp[j] = max(dp[j], dp[i] + 1)
+
+    return max(dp)
