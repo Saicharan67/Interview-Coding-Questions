@@ -11,3 +11,21 @@ Explanation : The subarrays having XOR of
                and {6}
 
 """
+
+
+def CountSubArrays(arr, m):
+    from collections import defaultdict
+    dt = defaultdict(int)
+    cnt = 0
+    currsum = 0
+    dt[0] = 1
+    for i in arr:
+        currsum ^= i
+        if dt[currsum ^ m]:
+            cnt += dt[currsum ^ m]
+
+        dt[currsum] += 1
+    return cnt
+
+
+print(CountSubArrays([5, 6, 7, 8, 9], 5))

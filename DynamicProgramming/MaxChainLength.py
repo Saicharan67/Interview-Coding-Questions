@@ -26,20 +26,6 @@ def maxchain(Parr, n, prev, pos):
 print(maxchain([[1, 2], [2, 3], [3, 4]], 3, 0, 0))
 
 
-# Parr = sorted(Parr, key=lambda x: x[1])
-#     # Initialize MCL(max chain
-#     # length) values for all indices
-#     mcl = [1 for i in range(n)]
-#     print(Parr)
-#     # Compute optimized chain
-#     # length values in bottom up manner
-#     for i in range(1, n):
-#         for j in range(0, i):
-#             if (Parr[i][0] > Parr[j][1] and mcl[i] < mcl[j]+1):
-#                 mcl[i] = mcl[j] + 1
-#     print(mcl)
-#     return max(mcl)
-
 def findLongestChain(pairs):
     pairs.sort()
     dp = [1] * len(pairs)
