@@ -15,7 +15,7 @@ def UniquePath(m, n):
     return UniquePath(m-1, n)+UniquePath(m, n-1)
 
 
-print(UniquePath(7, 3))
+print(UniquePath(3, 4))
 
 # DP approch
 
