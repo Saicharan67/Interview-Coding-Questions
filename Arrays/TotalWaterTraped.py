@@ -34,16 +34,17 @@ def WaterTrapedPointer(arr, n):
     rm = 0
     water = 0
     while l <= r:
-        if lm <= rm:
-            water += max(0, lm-arr[l])
-            lm = max(lm, arr[l])
-            l += 1
-        else:
+        if rm <= lm:
             water += max(0, rm-arr[r])
             rm = max(rm, arr[r])
             r -= 1
-        ic(water)
+        else:
+
+            water += max(0, lm-arr[l])
+            lm = max(lm, arr[l])
+            l += 1
+        ic(water, lm, rm)
     return water
 
 
-print(WaterTrapedPointer([7, 0, 4, 2, 5, 0, 6, 4, 0, 5], 10))
+print(WaterTrapedPointer([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1], 12))
