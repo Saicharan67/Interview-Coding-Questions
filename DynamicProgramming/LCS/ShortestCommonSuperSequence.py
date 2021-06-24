@@ -33,3 +33,7 @@ def ShortestCommonSubSequence(s1, s2):
     n = len(s1)
     m = len(s2)
     return n+m-DpLCS(s1, s2, n, m)
+
+
+print(ShortestCommonSubSequence("bbbaaaba",
+                                "bbababbb"))
