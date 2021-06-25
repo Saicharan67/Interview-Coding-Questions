@@ -15,6 +15,3 @@ def knapSack(wt, val, x, n):
     else:
         dp[n][x] = knapSack(wt, val, x, n-1)
         return dp[n][x]
-
-
-print(knapSack([10, 20, 30], [60, 100, 120], 50, 3))
