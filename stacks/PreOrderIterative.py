@@ -1,5 +1,5 @@
 """
-Given a head of a tree find the preOrder traersal of a tree using Iteration Method
+Given a head of a tree find the preOrder traversal of a tree using Iteration Method
 
 """
 

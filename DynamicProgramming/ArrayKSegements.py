@@ -1,6 +1,5 @@
 """
 
-
 Given an array a of size N and an integer K, the task is to divide the array into K segments such that sum of the minimums of K segments is maximized. 
 
 """
