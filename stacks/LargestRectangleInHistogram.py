@@ -43,15 +43,19 @@ def LargestRect(h):
     st = [-1]
     ans = 0
     for i, x in enumerate(h):
+
         while h[i] < h[st[-1]]:
+
             tmp = h[st.pop()]
+
             idx = i-st[-1]-1
             ans = max(ans, idx*tmp)
-        st.append(i)
 
+        st.append(i)
+        print(st)
     h.pop()
 
     return ans
 
 
-print(largestRectangleArea([2, 1, 5, 6, 2, 3]))
+print(LargestRect([1, 3, 6, 3, 1]))
