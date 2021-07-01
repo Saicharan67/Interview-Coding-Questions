@@ -18,7 +18,7 @@ ans = -float('inf')
 def Palindrome(s, i, j):
     if i >= j:
         return 0
-    if s == s[::-1]:
+    if s[i:j+1] == s[i:j+1][::-1]:
         return 0
 
     for k in range(i, j):

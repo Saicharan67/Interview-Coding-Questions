@@ -104,6 +104,15 @@ def height(root):
     return 1+max(height(root.left), height(root.right))
 
 
+def MinHeight(root):
+    if not root:
+        return -1
+    if not root.left or not root.right:
+        return max(MinHeight(root.left), MinHeight(root.right))+1
+    else:
+        return min(MinHeight(root.left), MinHeight(root.right))+1
+
+
 def FindMin(root):
     if root is None:
         return
