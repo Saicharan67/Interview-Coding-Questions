@@ -30,3 +30,6 @@ def sellandbuy(a, n):
 
 print(sellandbuy([11, 42, 49, 96, 23, 20, 49, 26,
       26, 18, 73, 2, 53, 59, 34, 99, 25, 2], 18))
+
+
+print("hi")
