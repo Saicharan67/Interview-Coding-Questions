@@ -13,9 +13,9 @@ def ArraySum(nums, m):
     total = sum(nums)
     while value < total:
         mid = (value+total)//2
-        print(mid, value, total)
+
         temp = isvalid(mid, nums, m)
-        print(temp)
+
         if (temp):
             total = mid
         else:
@@ -39,4 +39,4 @@ def isvalid(mid, nums, m):
     return subarrcount <= m
 
 
-print(ArraySum([7, 2, 5, 10, 8], 2))
+print(ArraySum([12, 34, 67, 90], 2))
