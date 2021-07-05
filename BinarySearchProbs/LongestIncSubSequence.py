@@ -26,8 +26,11 @@ def longest(nums):
     for num in nums:
         i = bisect.bisect_left(sub, num)
 
-        if i == len(nums):
+        if i == len(sub):
             sub.append(num)
         else:
             sub[i] = num
     return len(sub)
+
+
+print(longest([10, 9, 2, 5, 3, 7, 101, 18]))
