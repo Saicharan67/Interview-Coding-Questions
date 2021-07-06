@@ -18,7 +18,7 @@ def solve(a, b):
     if len(a) <= 1:
         return False
     flag = False
-    for i in range(1, len(a)-1):
+    for i in range(1, len(a)):
         temp1 = solve(a[:i], b[-i:]) and solve(a[i:], b[:-i])  # swapped
         temp2 = solve(a[:i], b[:i]) and solve(a[i:], b[i:])    # not swapped
 
