@@ -23,3 +23,6 @@ def generateParenthesis(n):
             st.pop()
     backtrack(0, 0)
     return ans
+
+
+print(generateParenthesis(8))
