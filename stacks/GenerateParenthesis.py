@@ -11,7 +11,7 @@ def generateParenthesis(n):
 
     def backtrack(openN, closeN):
         if openN == closeN == n:
-            ans.append("".join(st))
+            print("".join(st))
             return
         if openN < n:
             st.append('(')
@@ -25,4 +25,4 @@ def generateParenthesis(n):
     return ans
 
 
-print(generateParenthesis(8))
+generateParenthesis(7)
