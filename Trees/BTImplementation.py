@@ -27,6 +27,31 @@ def inorderIteration(root):
     print()
 
 
+def preorderIteration(root):
+    s = [root]
+    while s:
+        temp = s.pop()
+        print(temp.data)
+        if temp.right:
+            s.append(temp.right)
+        if temp.left:
+            s.append(temp.left)
+
+
+def postorderIterative(root):
+    s = [root]
+    res = []
+    while s:
+        temp = s.pop()
+        res.append(temp.data)
+
+        if temp.left:
+            s.append(temp.left)
+        if temp.right:
+            s.append(temp.right)
+    return res[::-1]
+
+
 def insertion(root, key):
 
     if root is None:

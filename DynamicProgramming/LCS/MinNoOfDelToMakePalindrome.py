@@ -22,4 +22,4 @@ def CountDeletions(s):
     return len(s)-LongestPalindrom(s)
 
 
-print(CountDeletions('agbcba'))
+print(CountDeletions('abb'))
