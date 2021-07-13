@@ -17,14 +17,13 @@ def inorderIteration(root):
     curr = root
     while(curr is not None or s):
 
-        if curr is not None:
+        while curr is not None:
             s.append(curr)
             curr = curr.left
-        else:
-            curr = s.pop(-1)
-            print(curr.data)
-            curr = curr.right
-    print()
+
+        curr = s.pop(-1)
+        print(curr.data)
+        curr = curr.right
 
 
 def preorderIteration(root):
