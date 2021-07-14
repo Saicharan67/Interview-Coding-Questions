@@ -10,7 +10,6 @@ Example 1:
 Input: s = "aab"
 Output: 1
 Explanation: The palindrome partitioning ["aa","b"] could be produced using 1 cut.
-
 '''
 
 
