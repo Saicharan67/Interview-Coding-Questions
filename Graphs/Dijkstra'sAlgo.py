@@ -15,18 +15,9 @@ def ShortestPath(n, m, src):
     h = [(0, src)]
 
     while h:
-        current_distance, current_vertex = heappop(h)
+        d, u = heappop(h)
 
-        # Nodes can get added to the priority queue multiple times. We only
-        # process a vertex the first time we remove it from the priority queue.
-        if current_distance > dist[current_vertex]:
-            continue
-
-        for neighbor, weight in dt[current_vertex]:
-            distance = current_distance + weight
-
-            # Only consider this new path if it's better than any path we've
-            # already found.
-            if distance < dist[neighbor]:
-                dist[neighbor] = distance
-                heappush(h, (distance, neighbor))
+        for v, w in dt[u]:
+            if dist[v] > dist[u]+w:
+                dist[v] = dist[u]+w
+                heappush(h, (dist[v], v))
