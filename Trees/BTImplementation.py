@@ -175,9 +175,3 @@ if __name__ == '__main__':
     root.left.left.right.right = Node(9)
     root.left.right = Node(5)
     printLeftView(root)
-    # print("The tree before the deletion:")
-    # inorderIteration(root)
-    # key = 8
-    # deletion(root, key)
-    # print("\nThe tree after the deletion;")
-    # levelOrder(root)

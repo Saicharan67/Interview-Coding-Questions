@@ -31,3 +31,7 @@ class Solution:
             num >>= 1
             x, y = y, x + y
         return res
+
+
+s = Solution()
+print(s.findIntegers(5))
