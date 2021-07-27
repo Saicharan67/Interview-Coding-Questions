@@ -1,6 +1,7 @@
 """
 
-Given an array of integers and an integer x. Find the length of maximum size subarray having an average of integers greater than or equal to x.
+Given an array of integers and an integer x. 
+Find the length of maximum size subarray having an average of integers greater than or equal to x.
 
 Examples:
 
