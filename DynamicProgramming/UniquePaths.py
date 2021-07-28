@@ -26,3 +26,13 @@ def UniqueDp(m, n):
         for j in range(1, m):
             dp[i][j] = dp[i-1][j]+dp[i][j-1]
     return dp[n-1][m-1]
+
+
+'''
+On an Island, there is an airport that has an unlimited number of identical air-planes. 
+Each air-plane has a fuel capacity to allow it to fly exactly 1/2 way around the world, along a great circle. 
+The planes have the ability to refuel in flight without loss of speed or spillage of fuel. 
+Though the fuel is unlimited, the island is the only source of fuel. You can ignore the time and fuel consumption of refuelling.
+What is the minimum number of air-planes required to get one air plane all the way around the world assuming that all of the air planes must return safely to the airport?
+
+'''
