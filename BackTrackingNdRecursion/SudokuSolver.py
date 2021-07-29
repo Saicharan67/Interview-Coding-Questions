@@ -25,6 +25,7 @@ def isValid(board, r, c, cand):
         return False
 
     if any(board[i][c] == cand for i in range(9)):
+
         return False
 
     br, bc = 3*(r//3), 3*(c//3)
