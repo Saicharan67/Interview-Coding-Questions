@@ -21,6 +21,9 @@ def union(u, v, parent, rank):
         rank[u] += 1
 
 
+# union
+
+
 def Kruskal(n, m):
 
     edges = []
