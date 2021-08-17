@@ -1,16 +1,16 @@
 
 
-def findParent(node, parent):
+def GetParent(node, parent):
     if node == parent[node]:
         return node
-    parent[node] = findParent(parent[node], parent)
+    parent[node] = GetParent(parent[node], parent)
 
     return parent[node]
 
 
 def union(u, v, parent, rank):
-    u = findParent(u, parent)
-    v = findParent(v, parent)
+    u = GetParent(u, parent)
+    v = GetParent(v, parent)
 
     if rank[u] < rank[v]:
         parent[u] = v
@@ -40,7 +40,7 @@ def Kruskal(n, m):
     cost = 0
     mst = []
     for x, y, w in edges:
-        if(findParent(x, parent) != findParent(y, parent)):
+        if(GetParent(x, parent) != GetParent(y, parent)):
             cost += w
             mst.append([x, y])
             union(x, y, parent, rank)
