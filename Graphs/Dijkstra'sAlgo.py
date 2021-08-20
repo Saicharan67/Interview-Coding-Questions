@@ -15,7 +15,7 @@ def ShortestPath(n, m, src):
         dt[x].append([y, w])
         dt[y].append([x, w])
 
-    dist = [float('inf')]*(n)  # 0 based
+    dist = [float('inf')]*(n+1)  # 1 indexed
 
     dist[src] = 0
     h = [(0, src)]
@@ -27,3 +27,10 @@ def ShortestPath(n, m, src):
             if dist[v] > dist[u]+w:
                 dist[v] = dist[u]+w
                 heappush(h, (dist[v], v))
+    return dist
+
+
+Distances = ShortestPath(8, 13, 1)
+
+for i, n in enumerate(Distances[1:]):
+    print(f"Shortest Distance form A - {chr(ord('@')+i+1)} is :", n)
