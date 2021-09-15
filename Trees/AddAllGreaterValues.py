@@ -16,17 +16,12 @@ The above tree should be modified to following
       350   300    210   80
 
 '''
-'''
-# Tree Node
+
 class Node:
     def __init__(self, val):
         self.right = None
         self.data = val
         self.left = None
-'''
-
-# modify the BST and return its root
-
 
 def modify(root):
     p = [0]
