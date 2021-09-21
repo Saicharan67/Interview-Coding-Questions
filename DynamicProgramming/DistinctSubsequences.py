@@ -48,3 +48,4 @@ def numDistinct(s: str, t: str) -> int:
                 dp[i][j] += dp[i-1][j-1]
 
     print(dp[len(t)-1][len(s)-1])
+print(12)
