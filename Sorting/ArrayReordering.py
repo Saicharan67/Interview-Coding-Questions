@@ -1,6 +1,6 @@
 '''
 
-Question: 
+Question (tags: numberTheory , sorting , greedy , math): 
 =========
 You are given an array a consisting of n integers.
 
