@@ -25,7 +25,7 @@ def longest(nums):
     sub = []
     for num in nums:
         i = bisect.bisect_left(sub, num)
-
+        print(i)
         if i == len(sub):
             sub.append(num)
         else:
