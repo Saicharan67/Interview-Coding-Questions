@@ -7,15 +7,11 @@ Insert string "abc" into any position in t. More formally, t becomes tleft + "ab
 Return true if s is a valid string, otherwise, return false.
 
 """
-import re
-
-
-def isValid(s):
-    prev = ""
-    while s != prev:
-        prev = s
-        s = s.replace("abc", "")
-    return not s
-
-
-isValid("aabcbcc")
+import codeop
+def is_valid_code(line):
+    try:
+        codeop.compile_command(line)
+    except SyntaxError:
+        return False
+    else:
+        return True
