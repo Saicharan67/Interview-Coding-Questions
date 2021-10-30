@@ -1,0 +1,8 @@
+import codeop
+def is_valid_code(line):
+    try:
+        codeop.compile_command(line)
+    except SyntaxError:
+        return False
+    else:
+        return True
