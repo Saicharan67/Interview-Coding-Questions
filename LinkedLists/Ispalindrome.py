@@ -11,24 +11,24 @@ Output: true
 """
 
 
-def isPalindrome(head):
-    arr = []
-    slow = head
-    fast = head
+def isPalindrome(n):
+    lst = [int(n) for n in str(n)]
+    l=len(lst)
+    if l==0 || l==1:
+        return True
+    elif len(lst)%2==0:
+        for k in range (l)
+        #####
+    else:
+        while (k<=((l-1)/2)):
+            if (list[]):
+                #####   
 
-    while fast and fast.next:
-        arr.append(slow.val)
-        slow = slow.next
-        fast = fast.next.next
-    if fast:
-        slow = slow.next
-    while slow:
-        if slow.val != arr[-1]:
-            return False
-        else:
-            slow = slow.next
-            arr.pop()
-    return True
+for i in range (999, 100, -1):
+    for j in range (999,100, -1):
+        if isPalindrome(i*j):
+            print(i*j)
+            break
 
 
 """
